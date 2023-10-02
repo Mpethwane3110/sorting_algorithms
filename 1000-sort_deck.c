@@ -1,31 +1,3 @@
-#include "sort.h"
-
-int _strcmp(const char *s1, const char *s2);
-char get_value(deck_node_t *card);
-void insertion_sort_deck_kind(deck_node_t **deck);
-void insertion_sort_deck_value(deck_node_t **deck);
-void sort_deck(deck_node_t **deck);
-
-/**
- * _strcmp - functn that compares two strings.
- * @s1: 1st string to be compared
- * @s2: 2nd string to be compared
- * Return: +ve byte difference if s1 > s2
- *         0 if s1 == s2
- *         -ve byte difference if s1 < s2
- */
-int _strcmp(const char *s1, const char *s2)
-{
-        while (*s1 && *s2 && *s1 == *s2)
-        {
-                s1++;
-                s2++;
-        }
-
-        if (*s1 != *s2)
-                return (*s1 - *s2);
-        return (0);
-}
 #include "deck.h"
 
 int _strcmp(const char *s1, const char *s2);
